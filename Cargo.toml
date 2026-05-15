@@ -1,0 +1,14 @@
+[workspace]
+members = [
+  "contracts/conditional_payment",
+  "contracts/escrow"
+]
+resolver = "2"
+
+[profile.release]
+opt-level = "z"
+overflow-checks = true
+debug = false
+strip = "symbols"
+panic = "abort"
+codegen-units = 1
